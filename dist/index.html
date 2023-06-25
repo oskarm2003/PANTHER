@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oskar Marciniak">
+    <title>PANTHER</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./script/main.bundle.js" defer></script>
+</head>
+
+<body>
+    <!-- <input type="color" name="" id=""> -->
+    <div id="start-screen">
+        <h1>PANTHER</h1>
+        <p>by Oskar Marciniak</p>
+        <p>controls:</p>
+        <div id="controls">
+            <p><span>[w]</span><span>-</span><span>move down</span></p><br />
+            <p><span>[s]</span><span>-</span><span>move up</span></p><br />
+            <p><span>[a]</span><span>-</span><span>move left</span></p><br />
+            <p><span>[d]</span><span>-</span><span>move right</span></p><br />
+            <p><span>[space]</span><span>-</span><span>shoot</span></p><br />
+            <p><span>[esc]</span><span>-</span><span>pause</span></p><br />
+        </div>
+        <p>press [space] to continue</p>
+    </div>
+
+
+    <div id="wrapper">
+        <canvas id="game-field" height="168" width="384"></canvas>
+        <canvas id="control-panel" height="48" width="320"></canvas>
+        <div id="end"></div>
+    </div>
+
+
+</body>
+
+</html>
