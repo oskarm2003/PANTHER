@@ -30,7 +30,7 @@ export const set_platform = () => {
         window.addEventListener('deviceorientation', manage_orientation);
         window.addEventListener('touchstart', () => { PHONE_MOTION.clicked = true })
         try {
-            document.getElementById('start-screen').innerHTML = '<h1>PANTHER</h1><p style="margin-bottom:30%">by Oskar Marciniak<br/>use horizontal mode for the best experience<br/>click anywhere to continue</br>sound will play</p>'
+            document.getElementById('start-screen').innerHTML = '<h1>PANTHER</h1><p style="margin-bottom:30%">by Oskar Marciniak<br/>use horizontal mode for the best experience<br/>click anywhere to continue</br>sound will play</br>IOS not supported</p>'
         } catch (error) {
             console.log('error');
         }
