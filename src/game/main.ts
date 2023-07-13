@@ -4,11 +4,6 @@ import { TEXTURES } from "./assets";
 import { set_player_global } from "../engine/globals";
 import { set_platform } from "./platform";
 
-window.addEventListener('touchstart', () => { });
-window.addEventListener('touchend', () => { });
-window.addEventListener('touchcancel', () => { });
-window.addEventListener('touchmove', () => { });
-
 export const ENEMIES_TEXTURES: Array<any> = [
     [TEXTURES.enemy_bend_green, TEXTURES.enemy_green],
     [TEXTURES.enemy_bend_yellow, TEXTURES.enemy_yellow],

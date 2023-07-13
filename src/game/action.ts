@@ -80,8 +80,8 @@ document.onkeyup = (e) => {
     PRESSED = PRESSED.replace(e.code, '')
 }
 
+window.addEventListener('touchstart', () => { start_game() });
 window.onclick = () => {
-    console.log('hey');
 
     if (PHONE_MOTION.isMobile) {
         start_game()
@@ -90,12 +90,19 @@ window.onclick = () => {
 
 //starting game
 const start_game = () => {
-    try {
-        document.body.requestFullscreen()
-    } catch (error) {
-        console.log('element could not enter fullscreen');
+    if (PHONE_MOTION.isMobile) {
+        try {
+            document.body.requestFullscreen()
+        } catch (error) {
+            console.log('element could not enter fullscreen');
+        }
     }
-    THEME.play()
+    if (!PHONE_MOTION.isMobile && (document.getElementById('sound') as HTMLInputElement).checked) {
+        THEME.volume = 0.2
+        THEME.play()
+    } else {
+        THEME.volume = 0
+    }
     let startscreen: HTMLDivElement = document.getElementById('start-screen') as HTMLDivElement
     if (startscreen) {
         PRESSED = ''
@@ -238,6 +245,11 @@ const render_action = (): void => {
             CANVAS.width = 384
             CANVAS.height = 230
         }
+    }
+
+    //mute
+    if (PRESSED.includes('KeyM')) {
+        THEME.pause()
     }
 
     //change background

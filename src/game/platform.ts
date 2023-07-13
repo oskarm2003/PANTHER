@@ -28,9 +28,9 @@ export const set_platform = () => {
     if (isMobile) {
         PHONE_MOTION.isMobile = true
         window.addEventListener('deviceorientation', manage_orientation);
-        window.addEventListener('click', () => { PHONE_MOTION.clicked = true })
+        window.addEventListener('touchstart', () => { PHONE_MOTION.clicked = true })
         try {
-            document.getElementById('start-screen').innerHTML = '<h1>PANTHER</h1><p style="margin-bottom:30%">by Oskar Marciniak<br/>use horizontal mode for valid experience<br/>click anywhere to continue</p>'
+            document.getElementById('start-screen').innerHTML = '<h1>PANTHER</h1><p style="margin-bottom:30%">by Oskar Marciniak<br/>use horizontal mode for the best experience<br/>click anywhere to continue</br>sound will play</p>'
         } catch (error) {
             console.log('error');
         }
@@ -55,8 +55,6 @@ const manage_orientation = (event: DeviceOrientationEvent) => {
         b: event.beta,
         g: event.gamma
     }
-
-    console.log(PHONE_MOTION);
 
 }
 
