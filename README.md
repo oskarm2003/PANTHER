@@ -1,3 +1,5 @@
+#PANTHER
+
 PANTHER is an atari 8bit isometric action game in which a player controls flying ship and shoots down enemies.
 I took inspiration and recreated the game in typescript with an object oriented programming aproach.
 
